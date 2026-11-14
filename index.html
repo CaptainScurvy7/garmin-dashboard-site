@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Run log</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FF5B14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Run log">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="lock" hidden>
+  <form id="lock-form">
+    <h1>Locked.</h1>
+    <p>Enter your passphrase to load your training data.</p>
+    <input id="pass" type="password" autocomplete="current-password" placeholder="Passphrase" aria-label="Passphrase">
+    <button type="submit">Unlock</button>
+    <p id="lock-err" role="alert"></p>
+  </form>
+</div>
+<main id="app" aria-live="polite"></main>
+<nav id="tabs" aria-label="Sections" hidden>
+  <button data-tab="today" aria-current="page">Today</button>
+  <button data-tab="trends">Trends</button>
+  <button data-tab="runs">Runs</button>
+  <button data-tab="all">All time</button>
+  <button data-tab="race">Race</button>
+</nav>
+<div id="tip" role="status" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
